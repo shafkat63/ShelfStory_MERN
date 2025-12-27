@@ -56,13 +56,13 @@ const CustomerProfile: React.FC = () => {
 		);
 	if (!customer) return null;
 
-	const API_URL =  "http://localhost:5000";
+	const API_URL = "http://localhost:5000";
 
 	return (
 		<div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 font-sans">
 			<div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
 				{/* Header/Cover Section */}
-				<div className="h-32 bg-gradient-to-r from-blue-500 to-indigo-600"mport.meta.env.VITE_API_URL ||></div>
+				<div className="h-32 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
 
 				<div className="px-8 pb-8">
 					<div className="relative -mt-16 mb-6 flex justify-between items-end">
