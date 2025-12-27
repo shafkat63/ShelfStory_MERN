@@ -24,6 +24,24 @@ const userSchema = new mongoose.Schema(
 			enum: ["user", "admin"],
 			default: "user",
 		},
+		image: {
+			type: String, // URL or file path for the user's image
+			default: "", // Optional field
+		},
+		status: {
+			type: String, // e.g., "active", "inactive", "suspended"
+			default: "A",
+		},
+		phone: {
+			type: String,
+			required: false, // Optional, remove 'required' if phone number is not mandatory
+			validate: {
+				validator: function (v) {
+					return /\d{10}/.test(v); // Basic validation for 10 digit phone number
+				},
+				message: (props) => `${props.value} is not a valid phone number!`,
+			},
+		},
 	},
 	{ timestamps: true }
 );
